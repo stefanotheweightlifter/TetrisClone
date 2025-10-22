@@ -254,6 +254,7 @@ void reset(app_t *app) {
 }
 
 void gameInit(app_t *app) {
+    srand(app->startTime.tv_nsec);
     app->lastGameTimeIntervalStart = app->startTime;
     levelUp(app);
     randomBag(app);
